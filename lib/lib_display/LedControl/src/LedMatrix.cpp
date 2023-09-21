@@ -218,7 +218,7 @@ bool LedMatrix::scrollText()
     {
         textPosX = 0; // start from the beginning after text scrolled out of display;
         // Send to MQTT that new scrolling cycle has started
-        MqttPublishPayload(const char* topic, const char* payload)
+        //MqttPublishPayload(const char* topic, const char* payload)
     }
     drawTextAt(textBuf, textPosX, textPosY);
 
