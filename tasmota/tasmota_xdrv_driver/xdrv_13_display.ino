@@ -440,7 +440,10 @@ void SetDisplayDimmer(uint8_t dimmer) {
 
 /*-------------------------------------------------------------------------------------------*/
 
-#define DISPLAY_BUFFER_COLS    128          // Max number of characters in linebuf
+#ifndef DISPLAY_BUFFER_COLS
+  #define DISPLAY_BUFFER_COLS    128          // Max number of characters in linebuf
+#endif
+
 
 uint16_t GetColorFromIndex(uint32_t index) {
   if (index >= MAX_INDEXCOLORS) index = 0;

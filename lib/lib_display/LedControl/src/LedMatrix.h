@@ -40,7 +40,9 @@
 #endif
 
 #define MATRIX_BUFFER_SIZE MAX72XX_MAX_DEVICES * 8 // 8 bytes per modul. One byte represents 8 LEDs.
-#define TEXT_BUFFER_SIZE 256 // maximum text length that can be scrolled
+#ifndef TEXT_BUFFER_SIZE
+  #define TEXT_BUFFER_SIZE 256 // maximum text length that can be scrolled
+#endif
 #define TEXT_APPEND_BUFFER_SIZE 16 // used for characters that are appended to the scroll text, before it repeats
 #define SPI_BUFFER_SIZE MAX72XX_MAX_DEVICES * 2 // buffer size fort shifting commands to all devices (2 bytes each)
 
